@@ -20,7 +20,7 @@ function App() {
     const [showDialog, setShowDialog] = React.useState(false);
     const [apiResponse, setApiResponse] = React.useState<any>({})
 
-    /**true
+    /**
      * https://aws.github.io/amazon-chime-sdk-js/modules/gettingstarted.html
      */
     async function createMeeting() {
@@ -44,7 +44,12 @@ function App() {
                 <H5>Chime Demo</H5>
                 <Button onClick={createMeeting} loading={loading} disabled={loading}>Create Meeting</Button>
                 <GenericDialog isOpen={showDialog}>
-                    <p>{JSON.stringify(apiResponse, null, 3)}</p>
+                    <p style={{
+                        marginBottom: '10px',
+                        marginTop: 0,
+                        whiteSpace: 'pre-wrap',
+                        wordBreak: 'break-all'
+                    }}>{JSON.stringify(apiResponse, null, 3)}</p>
                 </GenericDialog>
             </Card>
         </div>
