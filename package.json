@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "amazon-ivs-player": "^1.0.0",
+    "video.js": "7.6.6",
     "@blueprintjs/core": "^3.29.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
